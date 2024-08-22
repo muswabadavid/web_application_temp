@@ -6,17 +6,34 @@
   <title>Temperature & Humidity Graphs</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+  <style>
+    .chart-container {
+      margin-bottom: 50px; /* Adds space between the two graphs */
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 350px; /* Adjusts the width of the container */
+      background-color: #f9f9f9;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 <h1>Temperature & Humidity Graphs</h1>
 
-<!-- Temperature Graph -->
-<h2>Temperature (°C)</h2>
-<canvas id="temperatureChart" width="300" height="150"></canvas>
+<!-- Temperature Graph Container -->
+<div class="chart-container">
+  <h2>Temperature (°C)</h2>
+  <canvas id="temperatureChart" width="300" height="150"></canvas>
+</div>
 
-<!-- Humidity Graph -->
-<h2>Humidity (%)</h2>
-<canvas id="humidityChart" width="300" height="150"></canvas>
+<!-- Humidity Graph Container -->
+<div class="chart-container">
+  <h2>Humidity (%)</h2>
+  <canvas id="humidityChart" width="300" height="150"></canvas>
+</div>
 
 <script>
   async function fetchData() {
